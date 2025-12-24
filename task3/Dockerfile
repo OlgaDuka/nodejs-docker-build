@@ -1,7 +1,7 @@
 FROM node:16-alpine
 WORKDIR /home/ilovedocker/app
-COPY /packages/package*.json ./
+COPY packages/package*.json ./
 RUN npm i
-COPY src/* .
+COPY src/* ./
 EXPOSE 3032
-CMD ["node main.js"]
+CMD ["node", "main.js"]
